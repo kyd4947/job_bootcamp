@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import time
 from rag_module import create_rag_chain
@@ -74,12 +75,11 @@ if uploaded_file:
 
         with st.spinner("문서 분석 중..."):
 
-            st.session_state.rag_chain = get_rag_chain_cached(
-                temp_path,
-                chunk_size,
-                chunk_overlap,
-                top_k
-            )
+            if os.path.exists(temp_path):
+                st.session_state.rag_chain = get_rag_chain_cached(temp_path, chunk_size, chunk_overlap, top_k)
+            else:
+                st.warning("PDF 파일을 먼저 업로드해주세요.")
+                st.stop()
 
         st.session_state.config = current_config
         st.success("분석 완료!")
