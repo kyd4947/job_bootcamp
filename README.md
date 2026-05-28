@@ -1,7 +1,3 @@
-프로그램의 완성도를 높여줄 README.md 파일 초안입니다. 이 내용을 복사해서 프로젝트 폴더 안에 README.md라는 파일을 만들고 붙여넣으세요.
-
-GitHub에 올리면 아주 멋지게 보일 거예요!
-
 💰 주식 레포트 분석 AI (RAG System)
 이 프로젝트는 사용자가 업로드한 PDF 형식의 주식 리포트를 Google Gemini AI와 RAG(Retrieval-Augmented Generation) 기술을 활용하여 분석하고, 관련 질문에 대한 답변을 제공하는 AI 웹 서비스입니다.
 
